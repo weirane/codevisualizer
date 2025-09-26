@@ -1,0 +1,23 @@
+{
+  "name": "codevisualizer",
+  "version": "0.1.0",
+  "description": "Developer-in-the-loop architecture explorer web app.",
+  "main": "server/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": [
+    "architecture",
+    "visualization",
+    "developer-tools"
+  ],
+  "author": "",
+  "license": "MIT"
+  ,
+  "dependencies": {
+    "@babel/parser": "^7.25.0",
+    "@babel/traverse": "^7.25.0"
+  }
+}

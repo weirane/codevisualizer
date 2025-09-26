@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codebase Diagram</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="diagram-page">
+    <header class="diagram-page__header">
+      <h1>Codebase Diagram</h1>
+      <a class="secondary-btn link-btn" href="/">Back to Analyzer</a>
+    </header>
+
+    <main class="diagram-page__main">
+      <section class="diagram-page__controls">
+        <form id="diagram-form" class="diagram-form">
+          <label for="diagram-root">Project root directory</label>
+          <div class="diagram-form__row">
+            <input id="diagram-root" name="rootPath" type="text" placeholder="/absolute/path/to/project" required />
+            <button type="submit">Load Diagram</button>
+          </div>
+        </form>
+        <p class="help-text">Enter the repository root to fetch structure and render the mind map timeline.</p>
+      </section>
+
+      <aside class="diagram-sidebar" id="diagram-sidebar"></aside>
+
+      <section class="diagram-page__content" id="diagram-content">
+        <div class="diagram-overlay__graph" id="diagram-graph"></div>
+        <aside class="diagram-detail" id="diagram-detail">
+          <div class="diagram-detail__header">
+            <h3 class="diagram-detail__title">Select a node</h3>
+            <p class="diagram-detail__subtitle">Choose a file or symbol to preview its source.</p>
+          </div>
+          <div class="diagram-detail__body">
+            <div class="diagram-detail__meta"></div>
+            <pre class="diagram-detail__code diagram-detail__code--loading">Waiting for selection…</pre>
+            <div class="diagram-detail__clones"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="/diagram-page.js"></script>
+  </body>
+</html>

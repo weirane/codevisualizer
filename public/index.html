@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Visualizer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Code Visualizer</h1>
+      <p>Developer-in-the-loop insights for your codebase.</p>
+    </header>
+
+    <main>
+      <section class="input-panel">
+        <h2>Analyze a Project</h2>
+        <form id="analyze-form">
+          <label for="rootPath">Project root directory</label>
+          <div class="input-group">
+            <input
+              id="rootPath"
+              name="rootPath"
+              type="text"
+              placeholder="/absolute/path/to/project"
+              required
+            />
+            <div class="button-group">
+              <button type="submit">Analyze</button>
+              <a class="secondary-btn link-btn" id="diagram-link" href="/diagram.html">Codebase Diagram</a>
+              <button type="button" id="summary-button" class="secondary-btn">Generate Summary</button>
+            </div>
+          </div>
+        </form>
+        <p class="help-text">
+          Provide an absolute path to the repository root on this machine.
+        </p>
+      </section>
+
+      <section class="output-panel">
+        <h2>Results</h2>
+        <div id="results" class="results">
+          <p>No analysis run yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for collaborative code exploration.</p>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
