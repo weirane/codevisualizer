@@ -61,9 +61,7 @@ async function analyzeProject(rootPath) {
     dependencyInsights,
     structureGraph,
     clones,
-    metrics: {
-      files: Object.fromEntries(metricsByFile),
-    },
+    metricsByFile: Object.fromEntries(metricsByFile),
     issues,
   };
 }
